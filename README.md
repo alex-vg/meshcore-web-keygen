@@ -2,6 +2,8 @@
 
 A web application that generates Ed25519 keys compatible with MeshCore. Runs entirely in your browser.
 
+🌐 **Live Demo:** [https://alex-vg.github.io/meshcore-web-keygen/](https://alex-vg.github.io/meshcore-web-keygen/)
+
 ## What it does
 
 Generates Ed25519 key pairs where the public key starts with a specific hex prefix. MeshCore uses the first two characters of the public key as a node identifier, so this helps avoid collisions with neighboring nodes.
@@ -103,3 +105,28 @@ For more complex key generation patterns (cosmetic patterns, longer prefixes, mu
 **Browser freezes**: Refresh the page
 
 **No match found**: Normal for difficult patterns, try shorter prefix
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages on every push to the `main` branch.
+
+### Setting up GitHub Pages
+
+To enable GitHub Pages for your fork or repository:
+
+1. Go to your repository **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions**
+3. The workflow will automatically deploy the site on the next push to `main`
+
+The site will be available at: `https://[username].github.io/meshcore-web-keygen/`
+
+### Manual Deployment
+
+You can also trigger a manual deployment:
+1. Go to the **Actions** tab in your repository
+2. Select the **Deploy to GitHub Pages** workflow
+3. Click **Run workflow**
+
+### Local Development
+
+To run locally, simply open `index.html` in a web browser. No build process required.
